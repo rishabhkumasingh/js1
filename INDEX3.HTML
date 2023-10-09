@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
 
     <input type="text" onkeypress="allowNumbers(event)" />
@@ -15,8 +13,12 @@
 
         function allowNumbers(event) {
 
-            if (event.key >= '0' && event.key <= '9') {
+            if (event.key >= 'a' && event.key <= 'z') {
                 event.returnValue = true;
+            }
+            else if(event.key >= 'A' && event.key <= 'Z'){
+                event.returnValue = true;
+
             }
             else {
                 event.returnValue = false;
@@ -27,6 +29,6 @@
         }
 
     </script>
+    
 </body>
-
 </html>
